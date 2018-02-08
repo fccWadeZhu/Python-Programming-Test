@@ -15,7 +15,7 @@ Description:Write a program that prints numbers from 1 to 1000 on each line.
 """
 if __name__ == '__main__':
     for i in range(1,1001):
-        if i%6 ==0 and i%7==0:
+        if i%6==0 and i%7==0:
             print 'Docket Alarm'
         elif i%7==0:
             print 'Docket'
