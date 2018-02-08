@@ -25,4 +25,4 @@ if __name__ == '__main__':
     response = urllib2.urlopen(request)
     downloadPath ="c:/q5-2.html"
     urllib.urlretrieve(url, downloadPath,None,data)
-    print 'downlaod complete!'
+    print 'download complete!'
