@@ -38,12 +38,12 @@ if __name__ == '__main__':
         appelleeTds = appelleeTable.find('tr', class_='alternaterow2').find_all('td')
         appelleeName = appelleeTds[0].get_text().strip()
         result['Appellee name'] = appelleeName
-        #CAV record number
+        # get CAV record number
         cavRecordDiv = soup.find('div',class_='customtab')
         cavBtag =cavRecordDiv.find('b')
         cavRecordNumber = cavBtag.get_text().replace('CAV Record #','').strip()
         result['CAV record number'] = cavRecordNumber
-        #date recieved
+        # get date recieved
         cavReceiveDiv = soup.find('div',id='noticeOfAppealSlider')
         cavReceiveTds = cavReceiveDiv.find('table').find_all('td')
         cavReceivedDate = cavReceiveTds[1].find('input')['value']
