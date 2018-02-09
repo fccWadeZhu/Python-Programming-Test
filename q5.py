@@ -21,8 +21,10 @@ if __name__ == '__main__':
     values = {"disclaimer": "Y", "action": "Continue"}
     data = urllib.urlencode(values)
     url = "http://casesearch.courts.state.md.us/casesearch/processDisclaimer.jis"
+    downloadPath1 = "./q5-1.html"
+    urllib.urlretrieve(url, downloadPath1)
     request = urllib2.Request(url, data)
     response = urllib2.urlopen(request)
-    downloadPath ="c:/q5-2.html"
-    urllib.urlretrieve(url, downloadPath,None,data)
-    print 'download complete!'
+    downloadPath2 ="./q5-2.html"
+    urllib.urlretrieve(url, downloadPath2,None,data)
+    print 'downlaod complete!'
