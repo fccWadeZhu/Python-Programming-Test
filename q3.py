@@ -49,7 +49,7 @@ if __name__ == '__main__':
         cavReceivedDate = cavReceiveTds[1].find('input')['value']
         result['CAV date recieved'] = cavReceivedDate
         jsonResult = json.dumps(result)
-        f = open("c:/q3.json", "w")
+        f = open("./q3.json", "w")
         f.write(jsonResult)
         f.close()
     except Exception as e:
