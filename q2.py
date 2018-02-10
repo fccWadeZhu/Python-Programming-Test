@@ -20,7 +20,7 @@ if __name__ == '__main__':
     #     baidu = socket.gethostbyname("baidu.com")
     # except:
     #
-    re = os.system('ping 106.117.142.51')
+    re = os.system('ping 172.217.12.164')
     if re:
         print 'not connected'
     else:
