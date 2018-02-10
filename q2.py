@@ -12,18 +12,22 @@ Description:Write a program that prints the IP address of the computer that it i
             If the computer is not connected to the internet, it should print "not connected"
 """
 
-import socket
+
 import os
+import urllib
+import re
+
+def get_out_ip():
+    
+    url = "http://checkip.dyndns.org"
+    request = urllib.urlopen(url).read()
+    ip = re.search(r"\d{1,3}\.\d{1,3}\.\d{1,3}.\d{1,3}", request).group(0)
+    return ip
 
 if __name__ == '__main__':
-    # try:
-    #     baidu = socket.gethostbyname("baidu.com")
-    # except:
-    #
-    re = os.system('ping 172.217.12.164')
-    if re:
+    reStr = os.system('ping www.google.com')
+    if reStr:
         print 'not connected'
     else:
-        hostname = socket.gethostname()
-        ip = socket.gethostbyname(hostname)
-        print ip
+        ip = get_out_ip()
+        print "your IP Address is: ", ip
