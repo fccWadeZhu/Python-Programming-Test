@@ -2,7 +2,7 @@
 
 # -*- coding: utf-8 -*-
 
-__title__ = ''
+__title__ = 'www'
 
 __author__ = 'Wade'
 
